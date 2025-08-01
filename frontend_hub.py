@@ -231,7 +231,7 @@ class SmartHomeApp():
                 edit_entry.insert(0,"Daily Wash, Quick Wash, Eco") #Inserting the default value to the entry box
                 invalid_label = Label(
                     edit_window,
-                    text="Invalid entry"
+                    text=self.smarthome.update_option(index, value)
                 )
                 invalid_label.grid(
                     row=1,
@@ -251,7 +251,7 @@ class SmartHomeApp():
                 edit_entry.insert(0,"0-260") #Inserting the default values to the entry box
                 invalid_label = Label(
                     edit_window,
-                    text="Invalid entry"
+                    text=self.smarthome.update_option(index, value)
                 )
                 invalid_label.grid(
                     row=1,
@@ -271,7 +271,7 @@ class SmartHomeApp():
                 edit_entry.insert(0,"0-150") #Inserting the default value to the entry box
                 invalid_label = Label(
                     edit_window,
-                    text="Invalid entry"
+                    text=self.smarthome.update_option(index, value)
                 )
                 invalid_label.grid(
                     row=1,
