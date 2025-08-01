@@ -64,7 +64,7 @@ class SmartOven(Base):
         if new_temp in self.temp_options: #Checking weither the inputted temperature is within the valid temp range
             self._temperature = new_temp
         else: 
-            print("Invalid temperature")
+            return("Invalid temperature")
     def __str__(self):
         if self.switched_on: #Checking the status of the device
             return f"SmartOven is on with a temperature of {self._temperature}"
@@ -137,13 +137,13 @@ class SmartHome(Base):
         if len(self.devices) < self.max_devices: #Checking if the max number of devices
             self.devices.append(device)
         else:
-            print('device rejected: Max devices reached')
+            return('device rejected: Max devices reached')
 
     def remove_device(self,index):
         if index in range(len(self.devices)): #Checking if the index is within the range of the devices
             self.devices.pop(index)
         else:
-            print("invalid selection")
+            return("invalid selection")
 
     def get_device(self,index):
         return self.devices[index]
